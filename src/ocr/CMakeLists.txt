@@ -9,7 +9,7 @@ if(OCR_SUPPORT)
     target_include_directories(ocrmodel PRIVATE ${MEMENTO_INCLUDE_DIRS})
     target_link_libraries(
         ocrmodel
-        PRIVATE mocr++
+        PRIVATE mocr::mocrxx
         PRIVATE Qt6::Concurrent
         PRIVATE Qt6::Gui
         PUBLIC Qt6::Core

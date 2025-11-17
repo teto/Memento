@@ -19,13 +19,3 @@ FetchContent_Declare(
     PATCH_COMMAND ${MEMENTO_QCORO_PATCH_COMMAND}
 )
 FetchContent_MakeAvailable(qcoro)
-
-if(OCR_SUPPORT)
-    set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
-    FetchContent_Declare(
-        libmocr
-        GIT_REPOSITORY https://github.com/ripose-jp/libmocr.git
-        GIT_TAG 24ec081102208d0ff6954c3003df2fb691713bd5
-    )
-    FetchContent_MakeAvailable(libmocr)
-endif()

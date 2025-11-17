@@ -139,6 +139,9 @@ if(MECAB_SUPPORT)
 	find_package(MeCab REQUIRED)
 endif()
 find_package(mpv REQUIRED)
+if(OCR_SUPPORT)
+	find_package(mocr REQUIRED)
+endif()
 find_package(SQLite3 REQUIRED)
 if(UNIX AND NOT APPLE) # Linux and Unix
 	find_package(
